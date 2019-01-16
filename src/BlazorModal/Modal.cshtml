@@ -1,0 +1,7 @@
+﻿@inherits ModalBase
+
+<div class="bm-overlay @(IsVisible ? "bm-active" : string.Empty)">
+    <div class="blazor-modal">
+        @Content
+    </div>
+</div>

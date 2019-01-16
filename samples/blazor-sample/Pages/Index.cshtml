@@ -1,7 +1,21 @@
 ﻿@page "/"
+@inject ModalService ModalService
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<hr />
+
+<button onclick="@ShowModal">Show Modal</button>
+
+@functions {
+
+private void ShowModal()
+{
+    ModalService.Show(typeof(SimpleForm));
+}
+
+}

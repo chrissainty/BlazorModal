@@ -1,3 +1,4 @@
+using BlazorModal;
 using Microsoft.AspNetCore.Blazor.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -7,6 +8,7 @@ namespace blazor_sample
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddBlazorModal();
         }
 
         public void Configure(IBlazorApplicationBuilder app)
