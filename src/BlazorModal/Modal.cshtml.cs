@@ -10,6 +10,7 @@ namespace BlazorModal
         [Inject] ModalService ModalService { get; set; }
 
         protected bool IsVisible { get; set; }
+        protected string Title { get; set; }
         protected RenderFragment Content { get; set; }
 
         protected override void OnInit()
@@ -18,8 +19,9 @@ namespace BlazorModal
             ModalService.OnClose += CloseModal;
         }
 
-        public void ShowModal(RenderFragment content)
+        public void ShowModal(string title, RenderFragment content)
         {
+            Title = title;
             Content = content;
             IsVisible = true;
             StateHasChanged();
