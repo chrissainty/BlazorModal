@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Blazor;
+using Microsoft.AspNetCore.Blazor.Components;
 using System;
 
 namespace BlazorModal.Services
@@ -10,6 +11,11 @@ namespace BlazorModal.Services
 
         public void Show(string title, Type contentType)
         {
+            if (contentType.BaseType != typeof(BlazorComponent))
+            {
+                throw new ArgumentException($"{contentType.FullName} must be a Blazor Component");
+            }
+
             var content = new RenderFragment(x => { x.OpenComponent(1, contentType); x.CloseComponent(); });
 
             OnShow?.Invoke(title, content);

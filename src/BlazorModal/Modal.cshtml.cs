@@ -30,6 +30,7 @@ namespace BlazorModal
         public void CloseModal()
         {
             IsVisible = false;
+            Title = "";
             Content = null;
             StateHasChanged();
         }

@@ -1,6 +1,4 @@
-﻿@inherits ModalContentBase
-
-@if (ShowForm)
+﻿@if (ShowForm)
 {
     <div class="simple-form">
         <div class="form-group">
@@ -22,8 +20,6 @@ else
     <div class="alert alert-success" role="alert">
         Thanks @FirstName @LastName for submitting the form.
     </div>
-
-    <button onclick="@CloseModal" class="btn btn-default">Close</button>
 }
 
 @functions {
