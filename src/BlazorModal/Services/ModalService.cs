@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Blazor;
-using Microsoft.AspNetCore.Blazor.Components;
+﻿using Microsoft.AspNetCore.Components;
 using System;
 
 namespace BlazorModal.Services
@@ -11,7 +10,7 @@ namespace BlazorModal.Services
 
         public void Show(string title, Type contentType)
         {
-            if (contentType.BaseType != typeof(BlazorComponent))
+            if (contentType.BaseType != typeof(ComponentBase))
             {
                 throw new ArgumentException($"{contentType.FullName} must be a Blazor Component");
             }

@@ -1,5 +1,5 @@
 using BlazorModal;
-using Microsoft.AspNetCore.Blazor.Builder;
+using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace blazor_sample
@@ -9,9 +9,10 @@ namespace blazor_sample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddBlazorModal();
+
         }
 
-        public void Configure(IBlazorApplicationBuilder app)
+        public void Configure(IComponentsApplicationBuilder app)
         {
             app.AddComponent<App>("app");
         }
