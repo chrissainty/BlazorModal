@@ -3,15 +3,15 @@
     <div class="simple-form">
         <div class="form-group">
             <label for="first-name">First Name</label>
-            <input bind="@FirstName" type="text" class="form-control" id="first-name" placeholder="Enter email" />
+            <input @bind="FirstName" type="text" class="form-control" id="first-name" placeholder="Enter email" />
         </div>
 
         <div class="form-group">
             <label for="last-name">Last Name</label>
-            <input bind="@LastName" type="text" class="form-control" id="last-name" placeholder="Enter email" />
+            <input @bind="LastName" type="text" class="form-control" id="last-name" placeholder="Enter email" />
         </div>
 
-        <button onclick="@SubmitForm" class="btn btn-primary">Submit</button>
+        <button @onclick="SubmitForm" class="btn btn-primary">Submit</button>
 
     </div>
 }
